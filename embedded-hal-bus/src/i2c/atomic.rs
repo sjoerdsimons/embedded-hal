@@ -117,6 +117,8 @@ where
     where
         F: FnOnce(&mut T) -> Result<R, <T as ErrorType>::Error>,
     {
+        todo!();
+        /*
         self.bus
             .busy
             .compare_exchange(
@@ -134,6 +136,7 @@ where
             .store(false, core::sync::atomic::Ordering::SeqCst);
 
         result.map_err(AtomicError::Other)
+        */
     }
 }
 

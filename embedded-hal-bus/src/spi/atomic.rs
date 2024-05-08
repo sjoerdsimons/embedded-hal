@@ -122,6 +122,8 @@ where
 {
     #[inline]
     fn transaction(&mut self, operations: &mut [Operation<'_, Word>]) -> Result<(), Self::Error> {
+        todo!();
+        /*
         self.bus
             .busy
             .compare_exchange(
@@ -141,5 +143,6 @@ where
             .store(false, core::sync::atomic::Ordering::SeqCst);
 
         result.map_err(AtomicError::Other)
+        */
     }
 }
